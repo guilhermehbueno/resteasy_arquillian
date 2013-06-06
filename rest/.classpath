@@ -1,31 +1,65 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" output="target/classes" path="src/main/java">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
+  <classpathentry kind="src" path="src/test/resources" output="target/test-classes" excluding="**/*.java"/>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/activation/activation/1.1/activation-1.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/config/arquillian-config-api/1.0.0.Final/arquillian-config-api-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/config/arquillian-config-impl-base/1.0.0.Final/arquillian-config-impl-base-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/container/arquillian-container-impl-base/1.0.0.Final/arquillian-container-impl-base-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/container/arquillian-container-spi/1.0.0.Final/arquillian-container-spi-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/container/arquillian-container-test-api/1.0.0.Final/arquillian-container-test-api-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/container/arquillian-container-test-impl-base/1.0.0.Final/arquillian-container-test-impl-base-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/container/arquillian-container-test-spi/1.0.0.Final/arquillian-container-test-spi-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/core/arquillian-core-api/1.0.0.Final/arquillian-core-api-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/core/arquillian-core-impl-base/1.0.0.Final/arquillian-core-impl-base-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/core/arquillian-core-spi/1.0.0.Final/arquillian-core-spi-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/container/arquillian-jetty-embedded-7/1.0.0.CR1/arquillian-jetty-embedded-7-1.0.0.CR1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/junit/arquillian-junit-container/1.0.0.Final/arquillian-junit-container-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/junit/arquillian-junit-core/1.0.0.Final/arquillian-junit-core-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/protocol/arquillian-protocol-servlet/1.0.0.Final/arquillian-protocol-servlet-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/test/arquillian-test-api/1.0.0.Final/arquillian-test-api-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/test/arquillian-test-impl-base/1.0.0.Final/arquillian-test-impl-base-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/test/arquillian-test-spi/1.0.0.Final/arquillian-test-spi-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/testenricher/arquillian-testenricher-cdi/1.0.0.Final/arquillian-testenricher-cdi-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/testenricher/arquillian-testenricher-initialcontext/1.0.0.Final/arquillian-testenricher-initialcontext-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/arquillian/testenricher/arquillian-testenricher-resource/1.0.0.Final/arquillian-testenricher-resource-1.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/resteasy/async-http-servlet-3.0/2.3.6.Final/async-http-servlet-3.0-2.3.6.Final.jar" sourcepath="M2_REPO/org/jboss/resteasy/async-http-servlet-3.0/2.3.6.Final/async-http-servlet-3.0-2.3.6.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.6/commons-codec-1.6.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-io/commons-io/1.4/commons-io-1.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.2/commons-logging-1.1.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpclient/4.2.1/httpclient-4.2.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpcore/4.2.1/httpcore-4.2.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.activation/1.1.0.v201105071233/javax.activation-1.1.0.v201105071233.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.mail.glassfish/1.4.1.v201005082020/javax.mail.glassfish-1.4.1.v201005082020.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.transaction/1.1.1.v201105210645/javax.transaction-1.1.1.v201105210645.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/resteasy/jaxrs-api/2.3.6.Final/jaxrs-api-2.3.6.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-continuation/8.1.1.v20120215/jetty-continuation-8.1.1.v20120215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-http/8.1.1.v20120215/jetty-http-8.1.1.v20120215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-io/8.1.1.v20120215/jetty-io-8.1.1.v20120215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-jndi/8.1.1.v20120215/jetty-jndi-8.1.1.v20120215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-plus/8.1.1.v20120215/jetty-plus-8.1.1.v20120215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-security/8.1.1.v20120215/jetty-security-8.1.1.v20120215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-server/8.1.1.v20120215/jetty-server-8.1.1.v20120215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-servlet/8.1.1.v20120215/jetty-servlet-8.1.1.v20120215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-util/8.1.1.v20120215/jetty-util-8.1.1.v20120215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-webapp/8.1.1.v20120215/jetty-webapp-8.1.1.v20120215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-xml/8.1.1.v20120215/jetty-xml-8.1.1.v20120215.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.10/junit-4.10.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/resteasy/resteasy-jaxrs/2.3.6.Final/resteasy-jaxrs-2.3.6.Final.jar" sourcepath="M2_REPO/org/jboss/resteasy/resteasy-jaxrs/2.3.6.Final/resteasy-jaxrs-2.3.6.Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/scannotation/scannotation/1.0.3/scannotation-1.0.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/shrinkwrap/shrinkwrap-api/1.0.0/shrinkwrap-api-1.0.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-api-base/2.0.0-alpha-2/shrinkwrap-descriptors-api-base-2.0.0-alpha-2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-spi/2.0.0-alpha-2/shrinkwrap-descriptors-spi-2.0.0-alpha-2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/shrinkwrap/container/shrinkwrap-extension-jetty-70/1.0.0-beta-1/shrinkwrap-extension-jetty-70-1.0.0-beta-1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/shrinkwrap/shrinkwrap-impl-base/1.0.0/shrinkwrap-impl-base-1.0.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jboss/shrinkwrap/shrinkwrap-spi/1.0.0/shrinkwrap-spi-1.0.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 </classpath>

@@ -7,104 +7,184 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>resteasy.arquillian Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!--jetty.version>7.0.2.v20100331</jetty.version -->
-		<jetty.version>8.1.1.v20120215</jetty.version>
-		<resteasy.version>2.3.6.Final</resteasy.version>
+		<version.arquillian_core>1.0.1.Final</version.arquillian_core>
+		<version.arquillian_container_glassfish>1.0.0.CR3</version.arquillian_container_glassfish>
+		<version.arquillian_container_openwebbeans>1.0.0.CR2</version.arquillian_container_openwebbeans>
+		<version.arquillian_container_jbossas>1.0.0.CR2</version.arquillian_container_jbossas>
+		<version.arquillian_container_weld>1.0.0.CR2</version.arquillian_container_weld>
+		<version.arquillian_container_tomcat>1.0.0.CR2</version.arquillian_container_tomcat>
+		<version.arquillian_container_jetty>1.0.0.CR1</version.arquillian_container_jetty>
+		<version.arquillian_container_osgi>1.0.0.CR4</version.arquillian_container_osgi>
+		<version.arquillian_container_openejb>1.0.0.CR2-SNAPSHOT</version.arquillian_container_openejb>
+		<version.arquillian_container_openejb_tomee>1.0.0-beta-3-SNAPSHOT</version.arquillian_container_openejb_tomee>
+		<version.arquillian_container_resin>1.0.0-SNAPSHOT</version.arquillian_container_resin>
+		<version.arquillian_drone>1.0.0.Final</version.arquillian_drone>
+		<version.arquillian_warp>1.0.0.Alpha2</version.arquillian_warp>
+		<version.arquillian_ajocado>1.0.0.CR2</version.arquillian_ajocado>
+		<version.glassfish>3.1.2</version.glassfish>
+		<version.hamcrest>1.2</version.hamcrest>
+		<version.hibernate_jpamodelgen>1.1.1.Final</version.hibernate_jpamodelgen>
+		<version.jboss_javaee6_spec>2.0.0.Final</version.jboss_javaee6_spec>
+		<version.jbossas_6>6.0.0.Final</version.jbossas_6>
+		<version.jbossas_7>7.1.1.Final</version.jbossas_7>
+		<version.jbossas_server_manager>1.0.3.GA</version.jbossas_server_manager>
+		<version.jersey>1.6</version.jersey>
+		<version.jetty>8.0.0.M3</version.jetty>
+		<version.jsfunit>2.0.0.Beta3-SNAPSHOT</version.jsfunit>
+		<version.junit>4.8.1</version.junit>
+		<version.log4j>1.2.14</version.log4j>
+		<version.openejb>3.1.4</version.openejb>
+		<version.openejb_4>4.0.0</version.openejb_4>
+		<version.openwebbeans>1.1.1</version.openwebbeans>
+		<version.resin>4.0.20</version.resin>
+		<version.resteasy>2.0.1.GA</version.resteasy>
+		<version.slf4j>1.5.10</version.slf4j>
+		<version.testng>5.14.6</version.testng>
+		<version.tomcat>6.0.29</version.tomcat>
+		<version.weld_core>1.1.1.Final</version.weld_core>
+		<version.weld_api>1.1.Final</version.weld_api>
 	</properties>
-	
+
+	<repositories>
+		<repository>
+			<id>jboss-public-repository</id>
+			<name>JBoss Repository</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public</url>
+			<releases>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>jboss-public-repository</id>
+			<name>JBoss Repository</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public</url>
+			<releases>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-		</dependency>
-		
-		<!-- RESTEASY -->
-		<dependency>
-			<groupId>org.jboss.resteasy</groupId>
-			<artifactId>resteasy-jaxrs</artifactId>
-			<version>2.2.1.GA</version>
-		</dependency>
-		<!-- RESTEASY -->
-		
-		<!-- PARA ARQUILLIAN -->
-		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-			<version>1.0.0.GA</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>4.2.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.spec</groupId>
-			<artifactId>jboss-javaee-6.0</artifactId>
-			<version>1.0.0.Final</version>
-			<type>pom</type>
-			<scope>provided</scope>
+			<groupId>xalan</groupId>
+			<artifactId>serializer</artifactId>
+			<version>2.7.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.jboss.arquillian</groupId>
 			<artifactId>arquillian-bom</artifactId>
-			<version>1.0.3.Final</version>
+			<version>1.0.4.Final</version>
 			<scope>import</scope>
 			<type>pom</type>
 		</dependency>
 
 		<dependency>
-			<groupId>org.jboss.arquillian.junit</groupId>
-			<artifactId>arquillian-junit-container</artifactId>
-			<version>1.0.3.Final</version>
-			<scope>test</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-plus</artifactId>
-			<version>${jetty.version}</version>
-			<scope>test</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.jboss.arquillian.container</groupId>
-			<artifactId>arquillian-jetty-embedded-7</artifactId>
-			<version>1.0.0.CR1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-webapp</artifactId>
-			<version>${jetty.version}</version>
-			<scope>test</scope>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
 		</dependency>
 
 		<dependency>
-			<groupId>org.jboss.arquillian.container</groupId>
-			<artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
-			<version>1.0.0.CR3</version>
-			<scope>test</scope>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-plus</artifactId>
+			<version>7.5.4.v20111024</version>
 		</dependency>
+
 		<dependency>
-			<groupId>org.jboss.weld</groupId>
-			<artifactId>weld-core</artifactId>
-			<version>1.1.5.Final</version>
-			<scope>test</scope>
+			<groupId>org.jboss.arquillian.junit</groupId>
+			<artifactId>arquillian-junit-container</artifactId>
+			<version>1.0.1.Final</version>
 		</dependency>
+
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-simple</artifactId>
-			<version>1.6.4</version>
-			<scope>test</scope>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>2.2.1.GA</version>
 		</dependency>
-		<!-- PARA ARQUILLIAN -->
-		
+ 
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>arq-jbossas-managed-7</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<dependencies>
+				<dependency>
+					<groupId>org.jboss.as</groupId>
+					<artifactId>jboss-as-arquillian-container-managed</artifactId>
+					<version>7.1.1.Final</version>
+				</dependency>
+				<dependency>
+					<groupId>org.jboss.spec</groupId>
+					<artifactId>jboss-javaee-web-6.0</artifactId>
+					<type>pom</type>
+					<version>2.0.0.Final</version>
+				</dependency>
+			</dependencies>
+			<build>
+				<testResources>
+					<testResource>
+						<directory>src/test/resources</directory>
+					</testResource>
+					<testResource>
+						<directory>src/test/resources-jbossas-7</directory>
+					</testResource>
+				</testResources>
+				<plugins>
+					<plugin>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<configuration>
+							<systemProperties>
+								<jboss.version>${version.jbossas_7}</jboss.version>
+							</systemProperties>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
+						<version>2.1</version>
+						<executions>
+							<execution>
+								<id>unpack</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>unpack</goal>
+								</goals>
+								<configuration>
+									<artifactItems>
+										<artifactItem>
+											<groupId>org.jboss.as</groupId>
+											<artifactId>jboss-as-dist</artifactId>
+											<version>${version.jbossas_7}</version>
+											<type>zip</type>
+											<overWrite>false</overWrite>
+											<outputDirectory>${project.build.directory}</outputDirectory>
+										</artifactItem>
+									</artifactItems>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
 	<build>
 		<finalName>resteasy.arquillian</finalName>
 		<plugins>
@@ -117,6 +197,8 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+		
+		
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
@@ -135,10 +217,39 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<testResources>
-			<testResource>
-				<directory>src/test/resources</directory>
-			</testResource>
-		</testResources>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-dependency-plugin
+										</artifactId>
+										<versionRange>
+											[2.1,)
+										</versionRange>
+										<goals>
+											<goal>unpack</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 </project>
