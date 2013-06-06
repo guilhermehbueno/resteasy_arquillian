@@ -1,5 +1,0 @@
-#surefire
-#Sun May 19 17:23:20 BRT 2013
-user.dir=/home/gui/my_github/resteasy_arquillian/resteasy.arquillian
-localRepository=/home/gui/.m2/repository
-basedir=/home/gui/my_github/resteasy_arquillian/resteasy.arquillian
